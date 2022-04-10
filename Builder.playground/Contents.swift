@@ -70,12 +70,15 @@ class PizzaBuilder {
         
             var result : String {
             var toppingString : String = ""
+                var toppingsCount = toppings.count
             for topping in toppings {
                 toppingString.append(topping.rawValue)
-                toppingString.append(", ")
+                toppingsCount -= 1
+                if toppingsCount != 0 {
+                    toppingString.append(", ")
+                }
             }
-            //let printable = toppingString.joined(separator: ", ")
-            return toppingString
+                return "Your Pizza with \(base.rawValue) base and \(size.rawValue) size with toppings: \(toppingString) is ready. Enjoy!"
         }
         print(result)
         return pizza
@@ -105,8 +108,10 @@ class PizzaDirector {
 //Client
 var newPizzaOrder = PizzaDirector()
 newPizzaOrder.pizzabuilder.setPredefinedPizza(newPizza: PizzaDirector.farmhousePizza)
+newPizzaOrder.pizzabuilder.addToppings(newToppings: [.herbedChicken])
 newPizzaOrder.pizzabuilder.addToppings(newToppings: [.mushroom])
 newPizzaOrder.pizzabuilder.removeTopping(topping: .tomato)
+newPizzaOrder.pizzabuilder.removeTopping(topping: .onion)
 newPizzaOrder.pizzabuilder.changeBase(newBase: .deepDish)
 newPizzaOrder.pizzabuilder.changeSize(newSize: .large)
 newPizzaOrder.pizzabuilder.build()

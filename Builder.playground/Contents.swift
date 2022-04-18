@@ -75,7 +75,7 @@ class PizzaBuilder {
                     toppingString.append(", ")
                 }
             }
-                return "Your \(size.rawValue) size \(base.rawValue) Pizza with toppings: \(toppingString) is ready. Enjoy!"
+                return "Your \(size.rawValue) size, \(base.rawValue) Pizza with toppings: \(toppingString) is ready. Enjoy!"
         }
         print(result)
         return pizza

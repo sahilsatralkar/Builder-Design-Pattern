@@ -91,7 +91,7 @@ class PizzaBuilder {
 
 //Director
 class PizzaDirector {
-    let pizzabuilder = PizzaBuilder()
+    let pizzaBuilder = PizzaBuilder()
     
     static let customPizza = Pizza(base: .classic, size: .medium, toppings: [])
     static let farmhousePizza = Pizza(base: .classic, size: .medium, toppings: [.cheese,.capsicum,.onion,.tomato])

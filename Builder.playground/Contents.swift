@@ -1,8 +1,6 @@
 import UIKit
-import Foundation
 
-///Builder pattern
-///
+///Builder design pattern
 
 // Product
 class Pizza {
@@ -17,9 +15,9 @@ class Pizza {
         self.toppings = toppings
         
     }
-    
 }
 
+//Enums
 enum Base : String {
     case classic = "Classic"
     case thinCrust = "Thin crust"
@@ -40,7 +38,6 @@ enum Topping : String {
     case herbedChicken = "Herbed chicken"
     case pepperoni = "Pepperoni"
 }
-
 
 // Builder
 class PizzaBuilder {

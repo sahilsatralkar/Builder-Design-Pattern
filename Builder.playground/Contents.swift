@@ -75,7 +75,7 @@ class PizzaBuilder {
                     toppingString.append(", ")
                 }
             }
-                return "Your Pizza with \(base.rawValue) base and \(size.rawValue) size with toppings: \(toppingString) is ready. Enjoy!"
+                return "Your \(size.rawValue) size \(base.rawValue) Pizza with toppings: \(toppingString) is ready. Enjoy!"
         }
         print(result)
         return pizza
@@ -86,7 +86,6 @@ class PizzaBuilder {
         self.size = newPizza.size
         self.toppings = newPizza.toppings
     }
-    let farmhousePizza = Pizza(base: .classic, size: .small, toppings: [.cheese,.capsicum,.onion,.tomato])
 }
 
 
